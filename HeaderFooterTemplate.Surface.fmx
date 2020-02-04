@@ -1,0 +1,21 @@
+inherited MainForm_Surface: TMainForm_Surface
+  ClientHeight = 1920
+  ClientWidth = 1080
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 1080.000000000000000000
+    inherited HeaderLabel: TLabel
+      Size.Width = 1080.000000000000000000
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 1872.000000000000000000
+    Size.Width = 1080.000000000000000000
+  end
+  inherited MemoLog: TMemo
+    Position.Y = 1545.000000000000000000
+    Size.Width = 1080.000000000000000000
+    Viewport.Width = 1080.000000000000000000
+    Viewport.Height = 327.000000000000000000
+  end
+end

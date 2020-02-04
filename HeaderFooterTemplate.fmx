@@ -1,0 +1,194 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Header Footer Form'
+  ClientHeight = 579
+  ClientWidth = 384
+  FormFactor.Width = 1920
+  FormFactor.Height = 1022
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 3
+  object Header: TToolBar
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object HeaderLabel: TLabel
+      Align = Contents
+      StyledSettings = [Size, Style]
+      Size.Width = 384.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.Font.Family = 'Verdana'
+      TextSettings.FontColor = claRed
+      TextSettings.HorzAlign = Center
+      Text = 'Android MQTT Broker test'
+    end
+  end
+  object Footer: TToolBar
+    Align = Bottom
+    Position.Y = 531.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 1
+    object ConnectBtn: TSpeedButton
+      StaysPressed = True
+      GroupName = 'grpconnection'
+      StyledSettings = [Family, Size, Style]
+      Padding.Left = 6.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Position.X = 12.000000000000000000
+      Size.Width = 170.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonleft'
+      Text = 'Connect'
+      TextSettings.FontColorForState.Pressed = claSlateblue
+      OnClick = ConnectBtnClick
+    end
+    object DisconnectBtn: TSpeedButton
+      StaysPressed = True
+      Enabled = False
+      GroupName = 'grpconnection'
+      StyledSettings = [Family, Size, Style]
+      Padding.Left = 6.000000000000000000
+      Padding.Top = 6.000000000000000000
+      Padding.Right = 6.000000000000000000
+      Padding.Bottom = 6.000000000000000000
+      Position.X = 182.000000000000000000
+      Size.Width = 170.000000000000000000
+      Size.Height = 42.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'segmentedbuttonright'
+      Text = 'Disconnect'
+      TextSettings.FontColorForState.Pressed = claSlateblue
+      OnClick = DisconnectBtnClick
+    end
+  end
+  object Circle1: TCircle
+    Fill.Color = claDarkgray
+    Position.X = 296.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 42.000000000000000000
+    Size.Height = 42.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Color = claDarkgray
+    Stroke.Thickness = 0.000000000000000000
+  end
+  object led: TCircle
+    Fill.Color = claMaroon
+    Position.X = 301.000000000000000000
+    Position.Y = 84.000000000000000000
+    Size.Width = 32.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 270.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 91.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 10.000000000000000000
+    Text = 'Connection Status'
+    TabOrder = 3
+  end
+  object brokerLbl: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 49.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 14.000000000000000000
+    Text = 'Broker:'
+    TabOrder = 6
+  end
+  object portLbl: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 96.000000000000000000
+    TextSettings.Font.Size = 14.000000000000000000
+    Text = 'Port: 1883'
+    TabOrder = 7
+  end
+  object BrokerList: TComboBox
+    Items.Strings = (
+      'test.mosquitto.org'
+      'broker.hivemq.com'
+      'iot.eclipse.com'
+      'mqtt.fluux.io'
+      'test.mosca.io'
+      'broker.mqttdashboard.com')
+    ItemIndex = 0
+    ItemWidth = 10.000000000000000000
+    Position.X = 72.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    OnChange = BrokerListChange
+  end
+  object MemoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Memo Log')
+    ReadOnly = True
+    StyledSettings = [Family, Size, Style]
+    TextSettings.FontColor = claLime
+    OnChange = MemoLogChange
+    Align = Bottom
+    Position.Y = 204.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 327.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Viewport.Width = 376.000000000000000000
+    Viewport.Height = 319.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    Position.X = 16.000000000000000000
+    Position.Y = 152.000000000000000000
+    Enabled = False
+    Size.Width = 225.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object SendBtn: TButton
+    Enabled = False
+    Position.X = 272.000000000000000000
+    Position.Y = 144.000000000000000000
+    TabOrder = 11
+    Text = 'Send'
+    OnClick = SendBtnClick
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 14.000000000000000000
+    Text = 'Message to send'
+    TabOrder = 12
+  end
+  object TMSMQTTClient1: TTMSMQTTClient
+    BrokerHostName = 'test.mosquitto.org'
+    KeepAliveSettings.AutoReconnect = True
+    OnConnectedStatusChanged = TMSMQTTClient1ConnectedStatusChanged
+    OnPublishReceived = TMSMQTTClient1PublishReceived
+    Version = '1.1.0.2'
+    Left = 320
+    Top = 256
+  end
+end

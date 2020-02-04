@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android=""/>
+	</ActiveMobileDevice>
+	<Transactions>
+    <Transaction>2020/01/07 21:32:39.000.162,C:\fernando\projdelphi\provas rad studio\web test\MQTTBroker\Android broker test\HeaderFooterApplication.dproj=C:\fernando\projdelphi\provas rad studio\web test\MQTTBroker\Android broker test\AndroidBrokerTest.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

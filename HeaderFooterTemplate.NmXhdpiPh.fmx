@@ -1,0 +1,53 @@
+inherited MainForm_NmXhdpiPh: TMainForm_NmXhdpiPh
+  ClientHeight = 615
+  ClientWidth = 400
+  DesignerMasterStyle = 3
+  inherited Header: TToolBar
+    Size.Width = 400.000000000000000000
+    inherited HeaderLabel: TLabel
+      StyledSettings = [Size]
+      Size.Width = 400.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+    end
+  end
+  inherited Footer: TToolBar
+    Position.Y = 567.000000000000000000
+    Size.Width = 400.000000000000000000
+    inherited ConnectBtn: TSpeedButton
+      Position.Y = 3.000000000000000000
+    end
+    inherited DisconnectBtn: TSpeedButton
+      Position.Y = 3.000000000000000000
+    end
+  end
+  inherited brokerLbl: TLabel
+    Position.Y = 72.000000000000000000
+  end
+  inherited portLbl: TLabel
+    Position.Y = 104.000000000000000000
+  end
+  inherited BrokerList: TComboBox
+    ItemIndex = -1
+    Position.Y = 64.000000000000000000
+  end
+  inherited MemoLog: TMemo
+    Position.Y = 200.000000000000000000
+    Size.Width = 400.000000000000000000
+    Size.Height = 367.000000000000000000
+    Viewport.Width = 400.000000000000000000
+    Viewport.Height = 367.000000000000000000
+  end
+  inherited Edit1: TEdit
+    Size.Width = 257.000000000000000000
+  end
+  inherited SendBtn: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 280.000000000000000000
+  end
+  inherited Label2: TLabel
+    Position.Y = 136.000000000000000000
+  end
+  inherited TMSMQTTClient1: TTMSMQTTClient
+    BrokerHostName = ''
+  end
+end
